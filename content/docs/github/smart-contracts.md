@@ -16,10 +16,9 @@ The HedgeCore smart contracts are open-source and available for review, audit, a
 
 ### Core Contracts
 
-- **StakeableAssetImpl**: sUSDC token implementation with soul-bound logic
+- **SUDC**: sUSDC token implementation with soul-bound logic
 - **StrategyRouter**: Yield strategy routing and management
-- **VenusUSDCVault**: ERC-4626 vault for Venus Protocol integration
-- **StUSDCWrapper**: hUSDC wrapper for liquidity layer
+- **HUSDCWrapper**: hUSDC wrapper for liquidity layer
 - **HUSDC**: ERC20 token with lock-aware transfers
 
 ## Technology Stack
@@ -34,15 +33,15 @@ The HedgeCore smart contracts are open-source and available for review, audit, a
 
 ```
 contracts/
-├── StakeableAssetImpl.sol    # sUSDC token
-├── StrategyRouter.sol         # Yield routing
-├── VenusUSDCVault.sol        # Venus integration
-├── StUSDCWrapper.sol         # Wrapper contract
+├── SUDC.sol                  # sUSDC token
+├── StrategyRouter.sol        # Yield routing
+├── HUSDCWrapper.sol          # Wrapper contract
 ├── HUSDC.sol                 # hUSDC token
-└── interfaces/               # Contract interfaces
+└── interfaces/
+    └── IHUSDCWrapper.sol     # Wrapper interface
 
 test/
-├── StakeableAsset.test.js
+├── SUDC.test.js
 ├── StrategyRouter.test.js
 └── Wrapper.test.js
 
@@ -89,19 +88,17 @@ npx hardhat run scripts/deploy.js --network bscTestnet
 
 ### BSC Mainnet
 
-- **sUSDC Token**: `TBA`
+- **SUDC (sUSDC Token)**: `TBA`
 - **StrategyRouter**: `TBA`
-- **VenusUSDCVault**: `TBA`
-- **StUSDCWrapper**: `TBA`
-- **hUSDC Token**: `TBA`
+- **HUSDCWrapper**: `TBA`
+- **HUSDC (hUSDC Token)**: `TBA`
 
 ### BSC Testnet
 
-- **sUSDC Token**: `TBA`
+- **SUDC (sUSDC Token)**: `TBA`
 - **StrategyRouter**: `TBA`
-- **VenusUSDCVault**: `TBA`
-- **StUSDCWrapper**: `TBA`
-- **hUSDC Token**: `TBA`
+- **HUSDCWrapper**: `TBA`
+- **HUSDC (hUSDC Token)**: `TBA`
 
 ## Security
 
