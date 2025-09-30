@@ -9,11 +9,13 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:shadow-blue-500/40 transition-all duration-300">
-            <div className="w-4 h-4 bg-white rounded-sm"></div>
-          </div>
-          <span className="text-xl font-semibold text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
-            HedgeCore Docs
+          <img
+            src="/hedgecore-logo.svg"
+            alt="HedgeCore"
+            className="h-8 group-hover:opacity-80 transition-opacity duration-300"
+          />
+          <span className="text-sm font-medium text-gray-500">
+            Docs
           </span>
         </Link>
 
