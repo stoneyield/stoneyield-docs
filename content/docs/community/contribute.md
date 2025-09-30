@@ -18,7 +18,7 @@ HedgeCore welcomes contributions from developers, writers, designers, and commun
 - Test coverage improvements
 - Gas optimization
 
-**Repository**: [github.com/xia-zhang-web3/hedgecore](https://github.com/xia-zhang-web3/hedgecore)
+**Repository**: [github.com/HedgeCore-Protocol](https://github.com/HedgeCore-Protocol)
 
 #### Frontend
 - UI/UX improvements
@@ -26,7 +26,7 @@ HedgeCore welcomes contributions from developers, writers, designers, and commun
 - Mobile responsiveness
 - Accessibility enhancements
 
-**Repository**: [github.com/xia-zhang-web3/hedgecore/frontend](https://github.com/xia-zhang-web3/hedgecore/tree/main/frontend)
+**Repository**: [github.com/HedgeCore-Protocol](https://github.com/HedgeCore-Protocol)
 
 ### 2. Documentation
 
@@ -35,7 +35,7 @@ HedgeCore welcomes contributions from developers, writers, designers, and commun
 - Improve clarity and structure
 - Translate to other languages
 
-**Repository**: [github.com/xia-zhang-web3/hedgecore-docs](https://github.com/xia-zhang-web3/hedgecore-docs)
+**Repository**: [github.com/HedgeCore-Protocol](https://github.com/HedgeCore-Protocol)
 
 ### 3. Testing
 
