@@ -31,14 +31,14 @@ export function Navbar() {
             Main Site
           </Link>
           <Link
-            href="https://github.com/hedgecore"
+            href="https://github.com/HedgeCore-Protocol"
             target="_blank"
             className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
           >
             <Github className="w-5 h-5" />
           </Link>
           <Link
-            href="https://twitter.com/hedgecore"
+            href="https://x.com/hedgecore_io"
             target="_blank"
             className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
           >
