@@ -28,6 +28,20 @@ const sidebarNavItems = [
     ],
   },
   {
+    title: "Protocol",
+    items: [
+      { title: "Token Lifecycle", href: "/docs/protocol/token-lifecycle" },
+      { title: "Locking Mechanism", href: "/docs/protocol/locking-mechanism" },
+      { title: "Flash-Loan Resistance", href: "/docs/protocol/flash-loan-resistance" },
+      { title: "Transfer Restrictions", href: "/docs/protocol/transfer-restrictions" },
+      { title: "Contract Design", href: "/docs/protocol/contract-design" },
+      { title: "Security & Limits", href: "/docs/protocol/security-limits" },
+      { title: "Analytics & Monitoring", href: "/docs/protocol/analytics-monitoring" },
+      { title: "Yield Generation", href: "/docs/protocol/yield-generation" },
+      { title: "hUSDC Wrapper", href: "/docs/protocol/husdc-wrapper" },
+    ],
+  },
+  {
     title: "Features",
     items: [
       { title: "Key Features", href: "/docs/features/key-features" },
