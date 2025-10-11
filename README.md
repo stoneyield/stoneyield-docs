@@ -4,7 +4,7 @@ Official documentation for the HedgeCore protocol - a soul-bound hedged stableco
 
 ## Overview
 
-HedgeCore is a decentralized hedging protocol that introduces soul-bound stablecoins (sUSDC) and tradeable wrappers (hUSDC) for secure, sustainable yield generation through Venus Protocol integration.
+HedgeCore is a decentralized hedging protocol that introduces soul-bound stablecoins (sUSD) and tradeable wrappers (hUSDC) for secure, sustainable yield generation through Venus Protocol integration.
 
 ## Tech Stack
 

@@ -28,7 +28,7 @@ Venus Protocol represents the singular external protocol dependency, selected ba
 
 ## Restricted Minting and Movement
 
-All sUSDC generation pathways (`depositAndMint`, `rewardMint`) operate under `onlyOwner` restrictions. Token transfers face soul-bound constraints and remain prohibited absent explicit authorization through lock status completion or DEX whitelist inclusion.
+All sUSD generation pathways (`depositAndMint`, `rewardMint`) operate under `onlyOwner` restrictions. Token transfers face soul-bound constraints and remain prohibited absent explicit authorization through lock status completion or DEX whitelist inclusion.
 
 ## Deliberate Unlock Requirement
 
@@ -44,7 +44,7 @@ Protocol incorporates:
 
 - `pause()` and `unpause()` for minting and redemption flow suspension
 - `emergencyWithdrawUSDC()` for protocol capital evacuation
-- `recoverToken()` for mistakenly transferred non-sUSDC asset recovery
+- `recoverToken()` for mistakenly transferred non-sUSD asset recovery
 - `maintenanceOperation()` enabling KYC-verified emergency fund recovery (V4)
 
 These mechanisms operate under owner-only restriction with anticipated multisig governance and potential timelock implementation.
@@ -117,7 +117,7 @@ All critical operations generate events enabling:
 ### Wrapper Contract Protection
 The HUSDCWrapper contract implements comprehensive security measures:
 - **Immutable Architecture**: No administrative fund drainage functions
-- **One-Way Design**: Only hUSDC → sUSDC conversion (no unwrap)
+- **One-Way Design**: Only hUSDC → sUSD conversion (no unwrap)
 - **Reentrancy Defense**: Protected hedgeWrap operations
 - **Lock Validation**: Prevents premature vested token transfers via getHedgeLockInfo
 - **Permission-Based Access**: Restricted token locking to authorized addresses
@@ -125,7 +125,7 @@ The HUSDCWrapper contract implements comprehensive security measures:
 ### Economic Protection
 The one-way wrapper maintains security through:
 - **Simple Architecture**: No complex unwrap mechanisms to exploit
-- **Direct Conversion**: Straightforward hedgeWrap() and hedgeMint() operations
+- **Direct Conversion**: Straightforward hedgeWrap() and issueFromWrapper() operations
 - **Lock Enforcement**: Contract-level lock verification via getHedgeLockInfo()
 - **No Reverse Path**: Eliminates unwrap-related attack vectors
 
@@ -144,7 +144,7 @@ The one-way wrapper maintains security through:
 - No direct user fund custody
 - Explicit responsibility separation
 
-### 3. Venus Vault (VenusUSDCVault)
+### 3. Venus Vault (VenusUSDVault)
 - ERC-4626 standard compliance
 - Minimal, security-auditable codebase
 - Exclusive Venus interaction logic

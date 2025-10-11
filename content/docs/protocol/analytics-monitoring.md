@@ -13,7 +13,7 @@ HedgeCore provides several read-only functions to support dashboards, analytics 
 
 The `getProtocolStats()` function returns high-level information about current protocol state:
 
-- `totalSupply`: Total sUSDC in circulation
+- `totalSupply`: Total sUSD in circulation
 - `totalUSDCDeposited`: Aggregate USDC ever deposited
 - `totalRewardsDistributed`: Total rewards minted
 - `totalActiveStakers`: Count of unique hedging participants
@@ -39,7 +39,7 @@ The following functions expose per-participant analytics:
 - `getUserInfo(address)`:
   - `isLocked`: Whether the participant currently locked
   - `remainingTime`: Seconds left until unlock
-  - `totalBalance`: Current sUSDC balance
+  - `totalBalance`: Current sUSD balance
   - `stakedAmount`: All-time USDC deposited by participant
 
 - `getAvailableActions(address)`:

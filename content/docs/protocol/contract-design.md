@@ -13,7 +13,7 @@ The HedgeCore protocol comprises a modular smart contract architecture engineere
 
 ### Core Contracts
 
-#### 1. StakeableAssetImpl (sUSDC Token)
+#### 1. StakeableAssetImpl (sUSD Token)
 Inherits from OpenZeppelin upgradeable components:
 - `ERC20Upgradeable`: standard token interface with upgradeability
 - `ERC20PermitUpgradeable`: enables gasless approvals (EIP-2612)
@@ -28,7 +28,7 @@ Administers yield generation strategies:
 - Controls withdrawals from yield sources
 - Owner-managed strategy configuration
 
-#### 3. VenusUSDCVault
+#### 3. VenusUSDVault
 ERC-4626 compliant vault for Venus integration:
 - Deposits USDC into Venus Protocol
 - Manages vUSDC tokens
@@ -42,10 +42,10 @@ ERC-4626 compliant vault for Venus integration:
 - **Duration-based locks**: Implemented using `unlockAt` mapping per wallet.
 - **Manual unlocking**: Participants must invoke `unlock()` to enable transferability.
 - **Whitelist control**: DEX and pool addresses can receive whitelist via `setDex()`.
-- **Reward generation**: Admin can issue locked or placeholder-locked sUSDC using `rewardMint()`.
+- **Reward generation**: Admin can issue locked or placeholder-locked sUSD using `rewardMint()`.
 - **Emergency functions**: Includes `pause()`, `adminUnlock()`, `sweepUSDC()`.
 
-### Yield Production (StrategyRouter + VenusUSDCVault)
+### Yield Production (StrategyRouter + VenusUSDVault)
 - **Automated routing**: USDC deposits automatically route to Venus Protocol
 - **Yield optimization**: Deposits earn lending interest on Venus
 - **Strategy management**: Owner can adjust weights and introduce new strategies
@@ -83,11 +83,11 @@ The contract optimizes for gas usage:
 ```
 User Deposits USDC
        ↓
-StakeableAssetImpl (mints sUSDC)
+StakeableAssetImpl (mints sUSD)
        ↓
 StrategyRouter (routes to strategies)
        ↓
-VenusUSDCVault (deposits to Venus)
+VenusUSDVault (deposits to Venus)
        ↓
 Venus Protocol (generates yield)
        ↓

@@ -7,7 +7,7 @@ next: "whitepaper/tokenomics"
 
 # Protocol Architecture
 
-HedgeCore implements a modular smart contract infrastructure engineered to optimize yield generation while preserving security and operational clarity. The protocol issues and administers soul-bound, yield-accruing tokens (sUSDC) that generate returns via Venus Protocol integration.
+HedgeCore implements a modular smart contract infrastructure engineered to optimize yield generation while preserving security and operational clarity. The protocol issues and administers soul-bound, yield-accruing tokens (sUSD) that generate returns via Venus Protocol integration.
 
 ## Foundation Principles
 
@@ -21,7 +21,7 @@ HedgeCore implements a modular smart contract infrastructure engineered to optim
 
 The infrastructure comprises three primary contracts:
 
-### 1. StakeableAssetImpl (sUSDC Token)
+### 1. StakeableAssetImpl (sUSD Token)
 Inherits OpenZeppelin components:
 - `ERC20Upgradeable`: Conventional token interface supporting upgrades.
 - `ERC20PermitUpgradeable`: EIP-2612 gasless authorization.
@@ -35,7 +35,7 @@ Inherits OpenZeppelin components:
 - Processes strategy withdrawals
 - Owner-managed strategy configuration
 
-### 3. VenusUSDCVault
+### 3. VenusUSDVault
 - ERC-4626 standard vault for Venus Protocol connectivity
 - Channels USDC into Venus for yield accumulation
 - Administers vUSDC positions and interest accrual
@@ -44,10 +44,10 @@ Inherits OpenZeppelin components:
 ## Operational Components
 
 ### Primary Token Operations
-- **Deposit & Generation**: Transforms USDC → sUSDC at 1:1 ratio with participant-specified lock duration.
-- **Yield Distribution**: Generates supplementary sUSDC from accumulated returns.
+- **Deposit & Generation**: Transforms USDC → sUSD at 1:1 ratio with participant-specified lock duration.
+- **Yield Distribution**: Generates supplementary sUSD from accumulated returns.
 - **Position Release**: Manual unlock procedure post-expiration.
-- **Accelerated Redemption**: Operator-authorized sUSDC burn for USDC recovery.
+- **Accelerated Redemption**: Operator-authorized sUSD burn for USDC recovery.
 - **Mobility Constraints**: Locked positions prohibit transfers and approvals.
 
 ### Revenue Generation
@@ -65,9 +65,9 @@ Inherits OpenZeppelin components:
 ## Capital Flow Architecture
 
 ```
-Participant USDC → StakeableAsset → StrategyRouter → VenusUSDCVault → Venus Protocol
+Participant USDC → StakeableAsset → StrategyRouter → VenusUSDVault → Venus Protocol
                                                                             ↓
-Participant sUSDC ← Yield Allocation ← Protocol (93%) ← Returns Generation
+Participant sUSD ← Yield Allocation ← Protocol (93%) ← Returns Generation
 ```
 
 ## Design Constraints
@@ -81,10 +81,10 @@ HedgeCore maintains security through exclusions:
 
 ## hUSDC Wrapper Layer
 
-For liquidity requirements, HedgeCore provides hUSDC—a tradeable wrapper encapsulating sUSDC:
+For liquidity requirements, HedgeCore provides hUSDC—a tradeable wrapper encapsulating sUSD:
 
 - Enables DEX participation while preserving yield generation
-- Maintains soul-bound properties for underlying sUSDC
+- Maintains soul-bound properties for underlying sUSD
 - Provides market access without compromising security model
 
 ## Architectural Summary

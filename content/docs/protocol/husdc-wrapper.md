@@ -1,19 +1,19 @@
 ---
 title: "hUSDC Wrapper"
-description: "One-way wrapper enabling conversion from hUSDC to sUSDC with lock support"
+description: "One-way wrapper enabling conversion from hUSDC to sUSD with lock support"
 prev: "protocol/yield-generation"
 next: "features/key-features"
 ---
 
 # hUSDC Wrapper
 
-The hUSDC wrapper contract implements a one-way conversion mechanism from hUSDC (tradeable ERC20) to sUSDC (soul-bound token). This architecture enables participants to convert their liquid hUSDC holdings into yield-bearing sUSDC positions while maintaining protocol security.
+The hUSDC wrapper contract implements a one-way conversion mechanism from hUSDC (tradeable ERC20) to sUSD (soul-bound token). This architecture enables participants to convert their liquid hUSDC holdings into yield-bearing sUSD positions while maintaining protocol security.
 
 ## Contract Architecture
 
 ### HUSDCWrapper Contract
 
-The wrapper contract manages one-way conversion from hUSDC to sUSDC:
+The wrapper contract manages one-way conversion from hUSDC to sUSD:
 
 ```solidity
 contract HUSDCWrapper {
@@ -36,28 +36,28 @@ contract HUSDCWrapper {
 ### Key Functions
 
 #### hedgeWrap(uint256 amount)
-- Converts hUSDC to sUSDC at 1:1 ratio (one-way only)
+- Converts hUSDC to sUSD at 1:1 ratio (one-way only)
 - Requires hUSDC approval
-- Burns hUSDC and mints equivalent sUSDC
+- Burns hUSDC and mints equivalent sUSD
 - No conversion fees
 - **No reverse conversion available**
 
 #### hedgeWrapLocked(address to, uint256 amount, uint256 unlockTime)
-- Wraps hUSDC to sUSDC with time-lock
+- Wraps hUSDC to sUSD with time-lock
 - Used for vesting schedules
 - Lock enforced at wrapper level
 - Requires LOCKER_ROLE permission
 
 #### getHedgeLockInfo(address account)
 - Returns locked balance and unlock time
-- Used by sUSDC contract for transfer validation
+- Used by sUSD contract for transfer validation
 - Returns (uint256 locked, uint256 unlockTime)
 
-## sUSDC Token Implementation
+## sUSD Token Implementation
 
 ### Lock-Aware Transfers
 
-sUSDC implements transfer validation that checks wrapper locks:
+sUSD implements transfer validation that checks wrapper locks:
 
 ```solidity
 contract SUDC is ERC20, AccessControl {
@@ -69,27 +69,27 @@ contract SUDC is ERC20, AccessControl {
     }
 
     // Minting and burning (wrapper only)
-    function hedgeMint(address to, uint256 amount) external
-    function hedgeBurnFrom(address from, uint256 amount) external
+    function issueFromWrapper(address to, uint256 amount) external
+    function reclaimFromWrapper(address from, uint256 amount) external
 }
 ```
 
 ### Role-Based Access
 
 - **DEFAULT_ADMIN_ROLE**: Contract administration
-- **LOCKER_ROLE**: Can create locked sUSDC positions
+- **LOCKER_ROLE**: Can create locked sUSD positions
 - **WRAPPER_ROLE**: Wrapper contract permissions
 
 ## Use Cases
 
 ### 1. Yield Position Entry
-Convert liquid hUSDC holdings into yield-generating sUSDC positions to access Venus Protocol returns.
+Convert liquid hUSDC holdings into yield-generating sUSD positions to access Venus Protocol returns.
 
 ### 2. Token Vesting
-Lock sUSDC for team/investor distributions with programmable unlock schedules using `hedgeWrapLocked()`.
+Lock sUSD for team/investor distributions with programmable unlock schedules using `hedgeWrapLocked()`.
 
 ### 3. Treasury Management
-Protocols convert idle hUSDC reserves to sUSDC for sustainable yield generation without speculative risk.
+Protocols convert idle hUSDC reserves to sUSD for sustainable yield generation without speculative risk.
 
 ## Security Features
 
@@ -114,12 +114,12 @@ Protocols convert idle hUSDC reserves to sUSDC for sustainable yield generation 
 ### One-Way Conversion Flow
 
 1. **Entry Path Only**
-   - hUSDC → sUSDC via `hedgeWrap()`
+   - hUSDC → sUSD via `hedgeWrap()`
    - No reverse conversion mechanism
    - Immediate yield accrual upon conversion
 
 2. **Value Proposition**
-   - Convert tradeable hUSDC to yield-bearing sUSDC
+   - Convert tradeable hUSDC to yield-bearing sUSD
    - Access Venus Protocol yields
    - No way to convert back to hUSDC
    - Simple, secure architecture
@@ -132,15 +132,15 @@ Protocols convert idle hUSDC reserves to sUSDC for sustainable yield generation 
 // Check if tokens are locked
 (uint256 locked, uint256 unlockTime) = wrapper.getHedgeLockInfo(userAddress);
 
-// Wrap hUSDC to sUSDC (one-way only)
+// Wrap hUSDC to sUSD (one-way only)
 hUSDC.approve(address(wrapper), amount);
 wrapper.hedgeWrap(amount);
-// User now has sUSDC earning yield
+// User now has sUSD earning yield
 
 // Create locked position
 hUSDC.approve(address(wrapper), amount);
 wrapper.hedgeWrapLocked(recipient, amount, unlockTime);
-// Recipient has sUSDC but transfers are locked until unlockTime
+// Recipient has sUSD but transfers are locked until unlockTime
 ```
 
 ### For Protocols
@@ -153,4 +153,4 @@ The one-way wrapper enables:
 
 ## Summary
 
-The hUSDC wrapper provides a straightforward one-way mechanism for converting liquid hUSDC tokens into yield-bearing sUSDC positions. The one-way architecture eliminates complexity and potential exploit vectors while enabling yield generation through Venus Protocol integration. Once converted, sUSDC holders earn sustainable yields without the ability to convert back to hUSDC.
+The hUSDC wrapper provides a straightforward one-way mechanism for converting liquid hUSDC tokens into yield-bearing sUSD positions. The one-way architecture eliminates complexity and potential exploit vectors while enabling yield generation through Venus Protocol integration. Once converted, sUSD holders earn sustainable yields without the ability to convert back to hUSDC.

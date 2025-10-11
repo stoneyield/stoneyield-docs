@@ -45,7 +45,7 @@ All distributed rewards (Venus-derived and governance-minted) inherit recipient 
 - Locked addresses: rewards subject to identical `unlockAt` parameters
 - Unlocked/new addresses: 1-second placeholder lock applied, mandating manual release
 
-This preserves sUSDC's soul-bound characteristics across all reward distributions.
+This preserves sUSD's soul-bound characteristics across all reward distributions.
 
 ## Verifiable Yield Monitoring
 

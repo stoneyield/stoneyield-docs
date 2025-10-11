@@ -9,7 +9,7 @@ next: "features/use-cases"
 
 ## Soul-Bound Token Architecture
 
-sUSDC tokens maintain non-transferability and permanent binding to their minting wallet:
+sUSD tokens maintain non-transferability and permanent binding to their minting wallet:
 - Cannot transfer or trade during lock period
 - Eliminates speculative trading behaviors
 - Reinforces long-duration hedging commitment
@@ -34,7 +34,7 @@ Yield generation operates through genuine, non-inflationary mechanisms:
 ## Dual-Token System
 
 Unique architecture combining security with liquidity:
-- **sUSDC**: Soul-bound tokens for secure yield generation
+- **sUSD**: Soul-bound tokens for secure yield generation
 - **hUSDC**: Tradeable ERC20 wrapper enabling liquidity access
 - 1:1 conversion between both tokens
 - Underlying yield continues accruing after wrap

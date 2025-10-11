@@ -14,7 +14,7 @@ HedgeCore's architecture incorporates multiple layers of built-in safety mechani
 To mitigate potential exploit impact and preserve protocol health, HedgeCore enforces daily caps on deposit and mint volumes:
 
 - **DAILY_DEPOSIT_LIMIT**: Maximum USDC quantity that can deposit across all participants per 24-hour period.
-- **DAILY_MINT_LIMIT**: Maximum sUSDC quantity that can generate across all participants per 24-hour period.
+- **DAILY_MINT_LIMIT**: Maximum sUSD quantity that can generate across all participants per 24-hour period.
 
 These limits reset every new day (UTC-based) and track using on-chain counters. Exceeding them results in transaction reverts.
 
@@ -28,13 +28,13 @@ HedgeCore includes emergency tools deployable by protocol owner (typically multi
 
 - `pause()` and `unpause()` to halt or resume sensitive operations
 - `emergencyWithdrawUSDC()` to recover protocol-held USDC in systemic risk scenarios
-- `recoverToken()` to rescue mistakenly sent tokens (excluding sUSDC or core stablecoins)
+- `recoverToken()` to rescue mistakenly sent tokens (excluding sUSD or core stablecoins)
 
 These functions gate behind `onlyOwner` access and design for use with timelocks or multisig governance.
 
 ## Whitelisted Operations
 
-To prevent unauthorized integrations, only approved DEXs, routers, and hedging pools may engage with locked sUSDC. Whitelisting controls via `setDex()` and stores in the `isDex` mapping.
+To prevent unauthorized integrations, only approved DEXs, routers, and hedging pools may engage with locked sUSD. Whitelisting controls via `setDex()` and stores in the `isDex` mapping.
 
 ## Role Separation and Ownership
 

@@ -11,7 +11,7 @@ HedgeCore adopts a staged deployment strategy ensuring controlled launch, commun
 ## Q1 2025 — Foundation Deployment ✅
 
 - Deploy HedgeCore smart contracts to Binance Smart Chain (BSC) ✅
-- Launch StrategyRouter and VenusUSDCVault infrastructure ✅
+- Launch StrategyRouter and VenusUSDVault infrastructure ✅
 - Publish documentation portal and technical specifications ✅
 - Activate `depositAndMint()` and `rewardMint()` under multisig governance ✅
 - Release beta with Venus Protocol integration operational ✅

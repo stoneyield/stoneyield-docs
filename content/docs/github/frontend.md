@@ -27,10 +27,10 @@ The HedgeCore frontend provides an intuitive interface for interacting with the 
 ### Core Functionality
 
 - **Wallet Connection**: MetaMask, WalletConnect support
-- **Deposit USDC**: Mint soul-bound sUSDC tokens
+- **Deposit USDC**: Mint soul-bound sUSD tokens
 - **View Positions**: Real-time balance and lock status
 - **Unlock Tokens**: Transition from locked to transferable state
-- **Wrap/Unwrap**: Convert between sUSDC and hUSDC
+- **Wrap/Unwrap**: Convert between sUSD and hUSDC
 - **Analytics Dashboard**: Protocol statistics and APY tracking
 
 ### User Experience
@@ -144,11 +144,11 @@ export function DepositForm() {
 ```typescript
 // components/dashboard/Balance.tsx
 export function Balance() {
-  const { sUSDCBalance, hUSDCBalance } = useBalance()
+  const { sUSDBalance, hUSDCBalance } = useBalance()
 
   return (
     <div>
-      <p>sUSDC: {formatUnits(sUSDCBalance, 18)}</p>
+      <p>sUSD: {formatUnits(sUSDBalance, 18)}</p>
       <p>hUSDC: {formatUnits(hUSDCBalance, 18)}</p>
     </div>
   )

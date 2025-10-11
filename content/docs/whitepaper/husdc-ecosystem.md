@@ -1,6 +1,6 @@
 ---
 title: "hUSDC Ecosystem"
-description: "One-way wrapper enabling conversion from hUSDC to sUSDC with lock support"
+description: "One-way wrapper enabling conversion from hUSDC to sUSD with lock support"
 prev: "whitepaper/tokenomics"
 next: "whitepaper/security-model"
 ---
@@ -9,11 +9,11 @@ next: "whitepaper/security-model"
 
 ## Overview
 
-The hUSDC ecosystem implements a one-way conversion mechanism from hUSDC (tradeable ERC20) to sUSDC (soul-bound token). This architecture enables participants to convert their liquid hUSDC holdings into yield-bearing sUSDC positions.
+The hUSDC ecosystem implements a one-way conversion mechanism from hUSDC (tradeable ERC20) to sUSD (soul-bound token). This architecture enables participants to convert their liquid hUSDC holdings into yield-bearing sUSD positions.
 
 ## Token Architecture
 
-### sUSDC (Soul-bound Layer)
+### sUSD (Soul-bound Layer)
 - **Non-transferable** (with lock support)
 - **Yield-bearing**: Accrues returns from Venus Protocol
 - **Lock enforcement**: Supports time-locked positions
@@ -21,7 +21,7 @@ The hUSDC ecosystem implements a one-way conversion mechanism from hUSDC (tradea
 
 ### hUSDC (Liquidity Layer)
 - **ERC20 Standard**: Fully transferable and tradeable
-- **One-way conversion**: Converts to sUSDC via wrapper (no reverse path)
+- **One-way conversion**: Converts to sUSD via wrapper (no reverse path)
 - **DEX Compatible**: Tradable on PancakeSwap and alternative exchanges
 - **DeFi Integration-Ready**: Deployable as collateral or in yield strategies
 
@@ -29,7 +29,7 @@ The hUSDC ecosystem implements a one-way conversion mechanism from hUSDC (tradea
 
 ### HUSDCWrapper Contract
 
-The wrapper contract manages one-way conversion from hUSDC to sUSDC:
+The wrapper contract manages one-way conversion from hUSDC to sUSD:
 
 ```solidity
 contract HUSDCWrapper {
@@ -49,9 +49,9 @@ contract HUSDCWrapper {
 }
 ```
 
-### SUDC (sUSDC) Token Implementation
+### SUDC (sUSD) Token Implementation
 
-sUSDC implements lock-conscious transfer logic:
+sUSD implements lock-conscious transfer logic:
 
 ```solidity
 contract SUDC is ERC20, AccessControl {
@@ -64,35 +64,35 @@ contract SUDC is ERC20, AccessControl {
     }
 
     // Minting and burning (wrapper only)
-    function hedgeMint(address to, uint256 amount) external
-    function hedgeBurnFrom(address from, uint256 amount) external
+    function issueFromWrapper(address to, uint256 amount) external
+    function reclaimFromWrapper(address from, uint256 amount) external
 }
 ```
 
 ## Key Features
 
 ### One-Way Conversion
-- **hUSDC → sUSDC**: Convert tradeable hUSDC to yield-bearing sUSDC
+- **hUSDC → sUSD**: Convert tradeable hUSDC to yield-bearing sUSD
 - **No reverse path**: Conversion is permanent (no unwrap function)
-- **Yield generation**: sUSDC immediately starts earning Venus yields
+- **Yield generation**: sUSD immediately starts earning Venus yields
 - **Lock support**: Optional time-locks for vesting schedules
 
 ### Value Flow
 1. User holds hUSDC (tradeable ERC20)
-2. User calls `hedgeWrap()` to convert to sUSDC
-3. sUSDC accrues yield from Venus Protocol
+2. User calls `hedgeWrap()` to convert to sUSD
+3. sUSD accrues yield from Venus Protocol
 4. No way to convert back to hUSDC
 
 ## Application Scenarios
 
 ### 1. Yield Position Entry
-Participants convert liquid hUSDC holdings into yield-generating sUSDC positions to access Venus Protocol returns.
+Participants convert liquid hUSDC holdings into yield-generating sUSD positions to access Venus Protocol returns.
 
 ### 2. Vesting Schedules
 Use `hedgeWrapLocked()` for team/investor allocations with programmable unlock timetables that prevent premature transfers.
 
 ### 3. Treasury Management
-Protocols convert idle hUSDC reserves to sUSDC for sustainable yield generation without speculative risk.
+Protocols convert idle hUSDC reserves to sUSD for sustainable yield generation without speculative risk.
 
 ## Security Framework
 
@@ -113,10 +113,10 @@ Protocols convert idle hUSDC reserves to sUSDC for sustainable yield generation 
 ### Standard Conversion
 
 ```solidity
-// User converts hUSDC to sUSDC
+// User converts hUSDC to sUSD
 hUSDC.approve(address(wrapper), amount);
 wrapper.hedgeWrap(amount);
-// User now has sUSDC earning yield
+// User now has sUSD earning yield
 ```
 
 ### Locked Conversion (Vesting)
@@ -125,9 +125,9 @@ wrapper.hedgeWrap(amount);
 // Operator creates locked position
 hUSDC.approve(address(wrapper), amount);
 wrapper.hedgeWrapLocked(recipient, amount, unlockTime);
-// Recipient has sUSDC but transfers are locked until unlockTime
+// Recipient has sUSD but transfers are locked until unlockTime
 ```
 
 ## Summary
 
-The hUSDC ecosystem provides a straightforward mechanism for converting liquid hUSDC tokens into yield-bearing sUSDC positions. The one-way architecture eliminates complexity and potential exploit vectors while enabling yield generation through Venus Protocol integration.
+The hUSDC ecosystem provides a straightforward mechanism for converting liquid hUSDC tokens into yield-bearing sUSD positions. The one-way architecture eliminates complexity and potential exploit vectors while enabling yield generation through Venus Protocol integration.

@@ -9,7 +9,7 @@ next: "features/key-features"
 
 ## Soul-Bound Token Architecture
 
-sUSDC tokens maintain non-transferability and permanent binding to their minting wallet:
+sUSD tokens maintain non-transferability and permanent binding to their minting wallet:
 - Transfer and trading capabilities disabled
 - Eliminates speculative trading behaviors
 - Reinforces long-duration hedging commitment

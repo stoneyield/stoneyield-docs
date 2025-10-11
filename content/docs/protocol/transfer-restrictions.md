@@ -11,7 +11,7 @@ HedgeCore constructs around the soul-bound token concept—assets maintaining no
 
 ## Non-Transferable by Default
 
-sUSDC tokens maintain non-transferability unless the holding address receives explicit unlock. This restriction enforces at the contract level through a custom `_update()` override, which acts on every transfer attempt.
+sUSD tokens maintain non-transferability unless the holding address receives explicit unlock. This restriction enforces at the contract level through a custom `_update()` override, which acts on every transfer attempt.
 
 Permitted cases:
 - Generation (`from == address(0)`)
@@ -27,7 +27,7 @@ Regardless of lock period expiration, participants must manually invoke `unlock(
 
 ## Whitelisted DEX Compatibility
 
-Certain DEX addresses or liquidity pools can receive whitelist designation utilizing the `setDex()` function. This permits approved external systems to engage with sUSDC in tightly controlled manner, enabling future integrations without compromising protocol security.
+Certain DEX addresses or liquidity pools can receive whitelist designation utilizing the `setDex()` function. This permits approved external systems to engage with sUSD in tightly controlled manner, enabling future integrations without compromising protocol security.
 
 ## Special Addresses
 

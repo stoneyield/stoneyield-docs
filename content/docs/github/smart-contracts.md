@@ -16,7 +16,7 @@ The HedgeCore smart contracts are open-source and available for review, audit, a
 
 ### Core Contracts
 
-- **SUDC**: sUSDC token implementation with soul-bound logic
+- **SUDC**: sUSD token implementation with soul-bound logic
 - **StrategyRouter**: Yield strategy routing and management
 - **HUSDCWrapper**: hUSDC wrapper for liquidity layer
 - **HUSDC**: ERC20 token with lock-aware transfers
@@ -33,7 +33,7 @@ The HedgeCore smart contracts are open-source and available for review, audit, a
 
 ```
 contracts/
-├── SUDC.sol                  # sUSDC token
+├── SUDC.sol                  # sUSD token
 ├── StrategyRouter.sol        # Yield routing
 ├── HUSDCWrapper.sol          # Wrapper contract
 ├── HUSDC.sol                 # hUSDC token
@@ -88,14 +88,14 @@ npx hardhat run scripts/deploy.js --network bscTestnet
 
 ### BSC Mainnet
 
-- **SUDC (sUSDC Token)**: `TBA`
+- **SUDC (sUSD Token)**: `TBA`
 - **StrategyRouter**: `TBA`
 - **HUSDCWrapper**: `TBA`
 - **HUSDC (hUSDC Token)**: `TBA`
 
 ### BSC Testnet
 
-- **SUDC (sUSDC Token)**: `TBA`
+- **SUDC (sUSD Token)**: `TBA`
 - **StrategyRouter**: `TBA`
 - **HUSDCWrapper**: `TBA`
 - **HUSDC (hUSDC Token)**: `TBA`

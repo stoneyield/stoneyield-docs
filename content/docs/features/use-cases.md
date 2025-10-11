@@ -12,7 +12,7 @@ prev: "features/key-features"
 Risk-averse participants seeking stable returns without exposure to volatile DeFi strategies.
 
 ### HedgeCore Solution
-- Deposit USDC to receive soul-bound sUSDC
+- Deposit USDC to receive soul-bound sUSD
 - Earn sustainable yields through Venus Protocol lending
 - 93% of generated APY distributed to holders
 - No impermanent loss or complex strategy risk
@@ -30,7 +30,7 @@ Risk-averse participants seeking stable returns without exposure to volatile DeF
 Participants hold tradeable hUSDC tokens and want to access yield generation.
 
 ### HedgeCore Solution
-- Convert hUSDC to sUSDC through wrapper contract
+- Convert hUSDC to sUSD through wrapper contract
 - Start earning Venus Protocol yields immediately
 - Conversion is one-way (no reverse path)
 - Optional time-locks for vesting schedules
@@ -47,7 +47,7 @@ Participants hold tradeable hUSDC tokens and want to access yield generation.
 Teams and investors require programmable token vesting schedules with built-in security.
 
 ### HedgeCore Solution
-- Use `hedgeWrapLocked()` function for time-locked sUSDC
+- Use `hedgeWrapLocked()` function for time-locked sUSD
 - Set custom unlock schedules per recipient
 - Lock enforcement at contract level
 - Yield continues accruing during vesting
@@ -145,4 +145,4 @@ Yield aggregators want to integrate HedgeCore into complex strategies.
 
 ## Summary
 
-HedgeCore's dual-token architecture enables diverse use cases from conservative yield generation to sophisticated DeFi strategies. The one-way wrapper (hUSDC → sUSDC) provides a straightforward path to yield generation, while hUSDC's tradeable nature enables secondary market activity and DeFi composability without compromising sUSDC's security model.
+HedgeCore's dual-token architecture enables diverse use cases from conservative yield generation to sophisticated DeFi strategies. The one-way wrapper (hUSDC → sUSD) provides a straightforward path to yield generation, while hUSDC's tradeable nature enables secondary market activity and DeFi composability without compromising sUSD's security model.

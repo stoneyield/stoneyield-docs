@@ -14,7 +14,7 @@ HedgeCore generates sustainable yields for hedgers through integration with Venu
 ### 1. Deposit Flow
 When you deposit USDC into HedgeCore:
 ```
-Your USDC → StakeableAsset → StrategyRouter → VenusUSDCVault → Venus Protocol
+Your USDC → StakeableAsset → StrategyRouter → VenusUSDVault → Venus Protocol
 ```
 
 ### 2. Venus Protocol Integration
@@ -27,7 +27,7 @@ Your USDC → StakeableAsset → StrategyRouter → VenusUSDCVault → Venus Pro
 - Venus yields accrue automatically in vUSDC token
 - Protocol collects yields periodically
 - 7% protocol fee retained for operations
-- 93% distributed to sUSDC holders
+- 93% distributed to sUSD holders
 
 ## Current Yield Metrics
 
@@ -106,7 +106,7 @@ All subject to careful review and governance approval.
 
 ## Yield Distribution Schedule
 
-Yields distribute to sUSDC holders through:
+Yields distribute to sUSD holders through:
 - Periodic `rewardMint()` calls by operator
 - Proportional distribution based on holdings
 - Same lock mechanics as deposits
