@@ -104,9 +104,10 @@ function generateBreadcrumbs(slug: string[]) {
 export default async function DocPage({
   params,
 }: {
-  params: { slug?: string[] }
+  params: Promise<{ slug?: string[] }>
 }) {
-  const slug = params.slug ?? ["whitepaper", "abstract"]
+  const resolvedParams = await params
+  const slug = resolvedParams?.slug ?? ["whitepaper", "abstract"]
 
   const doc = await getDocContent(slug)
   if (!doc) notFound()
