@@ -6,7 +6,7 @@ next: "protocol/locking-mechanism"
 
 # Token Lifecycle
 
-The StoneYield protocol administers a comprehensive lifecycle for STUSD, the soul-bound hedging token. Each stage maintains careful engineering to enforce security, ensure transparency, and deliver sustainable yield without speculative transferability.
+StoneYield manages the full lifecycle of STUSD, its soul-bound hedge token. Each phase enforces security, transparency, and sustainable yield while avoiding speculative transfers.
 
 ## 1. Deposit and Generation
 

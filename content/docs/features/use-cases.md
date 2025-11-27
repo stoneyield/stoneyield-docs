@@ -9,14 +9,14 @@ prev: "features/key-features"
 ## 1. Conservative Yield Generation
 
 ### Scenario
-Risk-averse participants seeking stable returns without exposure to volatile DeFi strategies.
+Risk-averse users want steady returns without volatile DeFi exposure.
 
 ### StoneYield Solution
-- Deposit USDC to receive soul-bound STUSD
-- Earn sustainable yields through Venus Protocol lending
-- 93% of generated APY distributed to holders
-- No impermanent loss or complex strategy risk
-- Soul-bound design prevents flash loan exploits
+- Deposit USDC to mint soul-bound sUSDC
+- Earn sustainable yield via Venus lending rails
+- ~93% of APY flows to holders
+- No IL and minimized strategy complexity
+- Soul-bound layer blocks flash-loan abuse
 
 ### Benefits
 - Predictable, transparent returns
@@ -27,7 +27,7 @@ Risk-averse participants seeking stable returns without exposure to volatile DeF
 ## 2. Liquidity Via STUSD
 
 ### Scenario
-Desks with sUSDC exposure need portable liquidity for trading, liquidity provision, or settlements.
+Desks holding sUSDC need portable liquidity for trading, LP, or settlement.
 
 ### StoneYield Solution
 - Wrap sUSDC into STUSD at a 1:1 ratio using the StoneYield wrapper
@@ -81,7 +81,7 @@ Advanced users want to maximize returns by combining multiple yield sources.
 Participants want to use stablecoin holdings as collateral without selling.
 
 ### StoneYield Solution
-- Hold STUSD and deposit it as collateral in lending protocols that support ERC20 stablecoins
+- Hold STUSD and post it as collateral in lending protocols that support ERC20 stablecoins
 - Borrow additional capital without closing the core sUSDC position
 - Maintain hedged exposure while unlocking working capital
 - Use StoneYield monitoring tools to track wrapper health
@@ -112,7 +112,7 @@ DAOs and protocols need secure, yield-generating reserves management.
 ## 7. Market Making and Trading
 
 ### Scenario
-Sophisticated traders provide liquidity and trade sUSDC tokens.
+Sophisticated traders provide liquidity and trade STUSD pairs.
 
 ### StoneYield Solution
 - Trade STUSD pairs on DEXs (PancakeSwap, etc.)
@@ -145,4 +145,4 @@ Yield aggregators want to integrate StoneYield into complex strategies.
 
 ## Summary
 
-StoneYield's dual-token architecture empowers everything from conservative treasury management to complex DeFi strategies. Treasuries decide when capital sits in the soul-bound sUSDC layer or when it should roam the ecosystem as STUSD — all while staying verifiably hedged.
+StoneYield’s dual-token design covers conservative treasuries through to advanced DeFi stacks. Teams choose when capital remains in the soul-bound sUSDC layer or circulates as STUSD — staying provably hedged end to end.

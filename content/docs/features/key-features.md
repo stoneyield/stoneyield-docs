@@ -9,27 +9,27 @@ next: "features/use-cases"
 
 ## Soul-Bound Token Architecture
 
-sUSDC tokens maintain non-transferability and permanent binding to their minting wallet:
-- Cannot transfer or trade during lock period
-- Eliminates speculative trading behaviors
-- Reinforces long-duration hedging commitment
-- Enables precise and equitable reward attribution
+sUSDC stays anchored to the wallet that minted it:
+- Transfers/trading disabled while locked
+- Removes speculative churn
+- Encourages long-term hedge discipline
+- Rewards map precisely to the original owner
 
 ## Flash-Loan Defense
 
-Engineered to neutralize flash loan-based exploitation patterns:
-- No borrow-return cycles can compromise the system
-- Protects protocol yield pools from manipulation vectors
-- Secures integrity of participant reward allocations
+Built to blunt flash-loan vectors:
+- Borrow/repay loops can’t skew accounting
+- Yield pools stay insulated from mid-block manipulation
+- Reward distribution remains consistent
 
 ## Sustainable Yield Production
 
-Yield generation operates through genuine, non-inflationary mechanisms:
-- Yield distributes via on-chain reward minting functions under protocol control
-- Accumulated protocol fees for operations
-- Strategic integrations and collaborative partnerships
-- Zero token emissions or artificial APY constructions
-- Transparent, auditable reward architecture
+Returns come from verifiable sources, not emissions:
+- On-chain reward mints governed by the protocol
+- Fee accrual covers ops
+- Integrations and partner revenue streams
+- No inflationary APY gimmicks
+- Auditable math and flows
 
 ## Dual-Token System
 
@@ -37,7 +37,7 @@ Unique architecture combining security with liquidity:
 - **sUSDC**: Soul-bound ledger of hedged capital
 - **STUSD**: Tradeable ERC20 wrapper enabling liquidity access
 - 1:1 conversion between both tokens
-- Underlying yield continues accruing after wrap/unwarp
+- Yield accrues regardless of wrap state
 
 ## Security-First Design
 
@@ -63,4 +63,4 @@ Battle-tested yield generation through established DeFi infrastructure:
 - Multiple independent security audits
 - Transparent, market-driven interest rates
 - 93% of yields distributed to participants
-- 7% protocol fee for sustainable operations
+- 7% protocol fee sustains operations

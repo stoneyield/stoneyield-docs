@@ -7,11 +7,11 @@ next: "protocol/flash-loan-resistance"
 
 # Locking Mechanism
 
-StoneYield enforces a duration-based locking mechanism to ensure stability and discourage rapid inflow/outflow behaviors commonly observed in yield protocols. This mechanism applies to all STUSD tokens generated through deposits or reward allocations.
+StoneYield applies time-based locks to stabilize flows and curb rapid in/out churn. Every STUSD minted—whether from deposits or rewards—observes this lock model.
 
 ## Lock Duration Enforcement
 
-Every time STUSD generates—whether through participant deposit or protocol reward—it receives assigned lock duration. The period defines in seconds and stores per participant utilizing the `unlockAt` mapping. Throughout this period, the participant's tokens maintain soul-bound status and non-transferability.
+Each mint assigns a lock duration (tracked in `unlockAt` per wallet). During the lock, tokens stay soul-bound and non-transferable.
 
 - **Minimum lock**: 1 hour
 - **Maximum lock**: 365 days

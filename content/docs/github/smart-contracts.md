@@ -16,10 +16,10 @@ The StoneYield smart contracts are open-source and available for review, audit, 
 
 ### Core Contracts
 
-- **SUDC**: STUSD token implementation with soul-bound logic
+- **STUSD**: Transferable wrapper token with lock-aware transfers
 - **StrategyRouter**: Yield strategy routing and management
 - **STUSDWrapper**: sUSDC → STUSD wrapper with lock orchestration
-- **SUSDC**: ERC20 soul-bound staking token with lock-aware transfers
+- **SUSDC**: Soul-bound staking token with lock-aware transfers
 
 ## Technology Stack
 
@@ -88,10 +88,11 @@ npx hardhat run scripts/deploy.js --network bscTestnet
 
 ### BSC Mainnet
 
-- **SUDC (STUSD Token)**: `TBA`
-- **StrategyRouter**: `TBA`
-- **sUSDCWrapper**: `TBA`
-- **sUSDC (sUSDC Token)**: `TBA`
+- **SUSDC (Proxy)**: `0xAd66385c6db496258771B5fD8AC376E3dd0D1536`
+- **STUSD**: `0xafc7F13e2d07ebAca2f5486f6a1A88D28E4b16c6`
+- **STUSDWrapper**: `0x176857795836b0b7c6913572B38a497F7CfD0326`
+- **StrategyRouter**: `0x563f48aAD50a75Ef3662827a4d536dbd46aBb5a2`
+- **VenusUSDCVault**: `0x375Defe9293671a4459CF7206Ac6f440d0Eb0970`
 
 ### BSC Testnet
 

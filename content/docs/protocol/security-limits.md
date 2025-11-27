@@ -7,7 +7,7 @@ next: "protocol/analytics-monitoring"
 
 # Security & Limits
 
-StoneYield's architecture incorporates multiple layers of built-in safety mechanisms to minimize risk, ensure system integrity, and prevent misuse. These controls span from smart contract-level protections to operational governance practices.
+StoneYield layers safety controls to cut risk, preserve integrity, and curb misuse. Protections span contract logic through operational governance.
 
 ## Daily Constraints
 
@@ -50,4 +50,4 @@ Every sensitive action emits events trackable off-chain:
 
 ## Summary
 
-Security in StoneYield enforces through real on-chain constraints, not just assumed economic incentives. The layered approach—combining rate limiting, reentrancy guards, ownership control, and event logging—makes the system resilient to both technical and economic attacks.
+Security in StoneYield is enforced with on-chain constraints, not just economic assumptions. Rate limits, reentrancy guards, ownership separation, and audit-friendly events keep the system robust against technical and economic attacks.

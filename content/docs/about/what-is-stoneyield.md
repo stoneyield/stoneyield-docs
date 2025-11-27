@@ -6,38 +6,38 @@ next: "about/how-it-works"
 
 # What is StoneYield?
 
-StoneYield is a decentralized hedging network on Binance Smart Chain (BSC) that pairs institutional risk controls with composable DeFi rails. Instead of chasing unsustainable emissions, the protocol mints **sUSDC**, a soul-bound representation of hedged capital, and exposes it to curated multi-strategy vaults. Whenever liquidity is needed, that same position can be wrapped into **STUSD**, a transferable mirror that stays 100% collateralized.
+StoneYield is a hedging network on BNB Chain that blends institutional-grade guardrails with DeFi composability. It mints **sUSDC**, a soul-bound claim on hedged deposits, and allocates it across curated strategies. When portability is needed, the position can be wrapped 1:1 into **STUSD**, a transferable twin backed by the original sUSDC.
 
 ## sUSDC: The Soul-Bound Core
 
-Every USDC deposit routes through StoneYield automation and mints sUSDC directly to the originating wallet:
+Every USDC deposit mints sUSDC straight to the depositor:
 
-- **Non-transferable security** – sUSDC cannot move between wallets, eliminating flash-loan and sandwich vectors.
-- **Deterministic unlocks** – programmable lock menus (7 / 30 / 90 days) protect strategy safety.
-- **Native yield** – harvested APY flows straight back to each wallet based on its sUSDC balance.
+- **Locked to wallet** – non-transferable, closing off flash-loan/sandwich angles.
+- **Predictable unlocks** – preset lock menus (7 / 30 / 90 days) secure strategies.
+- **Direct yield** – harvested APY credits the holding wallet.
 
 ## STUSD: Portable Liquidity
 
-Treasury desks can convert sUSDC into STUSD at a 1:1 ratio via the StoneYield wrapper contract:
+Desks can wrap sUSDC into STUSD at parity via the wrapper:
 
-- **DEX + DeFi ready** – STUSD moves freely across PancakeSwap, lending markets, and automation flows.
-- **Always collateralized** – each STUSD remains backed by its originating sUSDC position.
-- **No strategy disruption** – unwrapping instantly returns to the protected, soul-bound state.
+- **DeFi/DEX ready** – works across AMMs and lending rails.
+- **Fully backed** – each STUSD maps to its underlying sUSDC.
+- **Zero disruption** – unwrap snaps back to the protected position.
 
 ## Operating Flow
 
 1. Deposit USDC into StoneYield.
-2. Receive sUSDC (soul-bound) while capital is deployed into hedged strategies.
-3. Optionally wrap to STUSD for on-chain liquidity needs.
-4. Harvest 93%+ of strategy APY (StoneYield retains a protocol fee for operations).
-5. Request unlocks according to the configured lock schedule.
+2. Get soul-bound sUSDC while capital runs through hedged strategies.
+3. Wrap to STUSD when liquidity is needed.
+4. Receive 93%+ of harvested APY (protocol retains a small ops fee).
+5. Request unlocks based on your selected schedule.
 
 ## Architecture Pillars
 
-- **Security-first**: multisig treasury controls, daily mint throttles, and audited smart contracts.
-- **Transparency**: live telemetry, unlock calendars, and wallet-level KPIs across the dashboard + docs.
-- **Composability**: STUSD remains chain-agnostic while sUSDC keeps risk quarantined to authenticated wallets.
+- **Security-first**: multisig controls, mint throttles, audited code.
+- **Transparency**: live metrics, unlock timelines, wallet KPIs.
+- **Composability**: STUSD moves broadly; sUSDC quarantines risk.
 
 ## Why BSC?
 
-StoneYield ships on Binance Smart Chain for low gas costs, rapid confirmations, and immediate access to the venues that power our hedging and lending strategies.
+BNB Chain offers low fees, fast finality, and direct access to the venues backing our hedging and lending flows.

@@ -6,12 +6,12 @@ next: "whitepaper/protocol-architecture"
 
 # Abstract
 
-StoneYield operates as a decentralized yield optimization protocol built on Binance Smart Chain (BSC), introducing soul-bound hedged tokens for secure capital deployment. At its core lies STUSD, an immutable token generated through a 1:1 USDC deposit mechanism that delivers consistent returns via Venus Protocol integration.
+StoneYield is a decentralized yield platform on BNB Chain that issues soul-bound hedged tokens for secure capital deployment. At the center is STUSD, minted 1:1 from USDC and earning through Venus integration.
 
-The protocol's distinctive approach enforces wallet-specific time-locks with mandatory manual release procedures, eliminating token mobility throughout the staking duration. This design philosophy neutralizes common DeFi vulnerability vectors such as flash loan exploits and circular farming strategies, simultaneously strengthening the bond between participants and their capital positions.
+Wallet-level time locks and mandatory manual unlocks keep tokens immobile during staking. This stance neutralizes common DeFi vectors—flash loans, circular farming—and tightens alignment between users and their positions.
 
-Revenue generation occurs transparently via Venus Protocol's lending infrastructure, where the protocol captures a 7% performance fee. Participants retain 93% of generated yields, establishing sustainable economics without dependence on token emissions. Supplementary incentives may flow through governance-approved minting operations.
+Yields flow transparently from Venus lending. The protocol retains a 7% fee; 93% goes to participants, enabling sustainable economics without emissions. Governance may authorize additional incentives via controlled minting.
 
-Addressing liquidity requirements without compromising security, StoneYield introduces sUSDC (StoneYield USDC), a freely tradeable ERC20 wrapper encapsulating STUSD positions. This dual-token architecture enables market access through sUSDC exchange on decentralized platforms while the underlying STUSD continues accruing yields. Emergency recovery mechanisms through KYC-verified operations provide additional user protection layers.
+To meet liquidity needs without sacrificing safety, StoneYield pairs STUSD with sUSDC, a transferable ERC20 wrapper around STUSD positions. This dual-token setup grants market access while the core stake keeps accruing. KYC-gated recovery paths add an extra protection layer.
 
-StoneYield represents a security-focused staking infrastructure merging soul-bound token principles with proven yield strategies, achieving equilibrium between capital preservation, sustainable returns, and liquidity access via the sUSDC wrapper ecosystem.
+StoneYield is a security-first staking stack that fuses soul-bound mechanics with proven yield routes, balancing capital preservation, durable returns, and liquid access via the sUSDC wrapper.

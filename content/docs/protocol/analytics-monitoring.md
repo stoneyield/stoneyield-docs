@@ -7,7 +7,7 @@ next: "protocol/yield-generation"
 
 # Analytics & Monitoring
 
-StoneYield provides several read-only functions to support dashboards, analytics platforms, and automated monitoring tools. These functions expose key protocol data points to enhance transparency and help participants, developers, and integrators make informed decisions.
+StoneYield ships a set of view-only calls for dashboards, analytics, and alerting systems. They surface core state so integrators and users can track health without off-chain guesses.
 
 ## Protocol Statistics
 
@@ -20,7 +20,7 @@ The `getProtocolStats()` function returns high-level information about current p
 - `contractUSDCBalance`: USDC balance held by protocol
 - `isPaused`: Emergency state of contract
 
-These values can poll to build charts, track growth over time, or detect anomalies.
+Poll these values to build charts, spot growth trends, or flag anomalies.
 
 ## Daily Limits Overview
 
@@ -30,7 +30,7 @@ The `getDailyLimitStatus()` function provides real-time usage data for current 2
 - `mintUsed` and `mintLimit`
 - `resetTime`: Timestamp when daily counters reset
 
-This proves useful for monitoring congestion, gauging protocol usage, or setting up alerting systems for threshold events.
+Useful for congestion monitoring, usage gauging, or alert thresholds.
 
 ## Participant-Level Insight
 
@@ -58,4 +58,4 @@ These can index using The Graph, SubQuery, or any event-driven backend to provid
 
 ## Summary
 
-StoneYield exposes comprehensive, low-cost read access to essential protocol and participant data. These analytics endpoints support transparency, enable better tooling, and reduce reliance on off-chain assumptions when integrating or building on top of the protocol.
+StoneYield offers inexpensive read access to protocol and user state. These endpoints increase transparency, improve tooling, and shrink reliance on off-chain assumptions when integrating or building on top.

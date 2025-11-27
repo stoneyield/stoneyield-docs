@@ -7,7 +7,7 @@ next: "whitepaper/tokenomics"
 
 # Protocol Architecture
 
-StoneYield implements a modular smart contract infrastructure engineered to optimize yield generation while preserving security and operational clarity. The protocol issues and administers soul-bound, yield-accruing tokens (STUSD) that generate returns via Venus Protocol integration.
+StoneYield uses a modular contract stack to optimize yield while keeping security and operations clear. It issues soul-bound, yield-accruing STUSD and routes returns via Venus.
 
 ## Foundation Principles
 

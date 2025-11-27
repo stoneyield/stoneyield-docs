@@ -11,7 +11,7 @@ Flash loans represent a significant threat vector in DeFi, enabling attackers to
 
 ## No Transferability = No Exploitation
 
-Because STUSD maintains non-transferability while locked, it cannot move between accounts or protocols. This eliminates the fundamental requirement of flash loan strategies, which depend on rapid token movement to extract value. Regardless of borrowed tokens, they cannot deploy for arbitrage, recursive borrowing, or liquidity mining exploits.
+With STUSD non-transferable while locked, tokens cannot be shuttled mid-transaction. Flash-loan playbooks that need rapid movement for arbitrage, recursive borrowing, or liquidity mining simply have nothing to work with.
 
 ## Lock Validation
 
@@ -38,4 +38,4 @@ Critical functions like `depositAndMint()` and `rewardMint()` receive protection
 
 ## Summary
 
-The combination of non-transferability, delayed unlocking, daily generation constraints, and reentrancy protection provides StoneYield with robust native resistance against flash loan-based attacks. Rather than depending exclusively on external audits or economic incentives, the protocol enforces flash-loan safety at the most fundamental level: token movement itself.
+A blend of non-transferability, explicit unlocks, daily caps, and reentrancy guards gives StoneYield native flash-loan resistance. The protocol locks down the core primitive—token movement—so attacks can’t get off the ground.

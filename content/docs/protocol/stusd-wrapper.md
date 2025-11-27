@@ -7,7 +7,7 @@ next: "features/key-features"
 
 # STUSD Wrapper
 
-The STUSD wrapper contract converts **sUSDC** (StoneYield’s soul-bound balance) into **STUSD**, an ERC20 token that can travel across DeFi. This layer keeps the core hedge intact while granting treasuries the liquidity they need for trading, lending, or settlements.
+The STUSD wrapper turns **sUSDC** (soul-bound) into **STUSD**, a portable ERC20. It preserves the hedge while giving treasuries liquidity for trading, lending, or settlements.
 
 ## Contract Architecture
 
@@ -18,13 +18,6 @@ contract STUSDWrapper {
     /// Wrap sUSDC into STUSD (1:1)
     function wrap(uint256 amount) external;
 
-    /// Initiate an unwrap back to sUSDC (subject to protocol unlock signals)
-    function requestUnwrap(uint256 amount) external;
-
-    /// Vesting helpers for team / investor distributions
-    function wrapLocked(address to, uint256 amount, uint256 unlockTime) external;
-    function burnLocked(address from, uint256 amount) external;
-
     /// Lock state
     function getLockInfo(address account) external view returns (uint256 locked, uint256 unlockAt);
 }
@@ -33,9 +26,9 @@ contract STUSDWrapper {
 Key behaviors:
 
 - 1:1 minting between sUSDC and STUSD
-- Wrapper is the only entity allowed to mint/burn STUSD
-- Optional lock schedules enforced at the wrapper level
-- Unwrap requests respect global unlock flags set by governance
+- Wrapper is the only entity allowed to mint STUSD
+- Optional lock schedules enforced at the wrapper level (no unwrap flow)
+- Governed controls around minting and reserves
 
 ### STUSD Token
 
@@ -50,7 +43,6 @@ contract STUSD is ERC20Permit, AccessControl {
     }
 
     function issueFromWrapper(address to, uint256 amount) external onlyRole(WRAPPER_ROLE) { ... }
-    function reclaimToWrapper(address from, uint256 amount) external onlyRole(WRAPPER_ROLE) { ... }
 }
 ```
 
@@ -68,7 +60,7 @@ The token contract checks wrapper lock data before every transfer, guaranteeing 
 1. Deposit USDC → mint sUSDC.
 2. `wrap(amount)` to receive STUSD.
 3. Use STUSD in DEX pools, lending markets, or automation strategies.
-4. `requestUnwrap(amount)` once liquidity duties finish; treasury regains sUSDC.
+4. Return to sUSDC by sweeping reserves (no public unwrap function).
 
 ### 2. Vesting & Locks
 - `wrapLocked()` issues STUSD with an enforced unlock timestamp.
@@ -97,8 +89,7 @@ wrapper.wrap(10_000e18);
 // Query lock data before transferring
 (uint256 locked, uint256 unlockAt) = wrapper.getLockInfo(msg.sender);
 
-// Request an unwrap when treasury needs to return to sUSDC
-wrapper.requestUnwrap(5_000e18);
+// No public unwrap: liquidity return is managed via wrapper reserves
 ```
 
 - Always check lock info if you expose STUSD transfers in your app.
@@ -107,4 +98,4 @@ wrapper.requestUnwrap(5_000e18);
 
 ## Summary
 
-The STUSD wrapper is the connective tissue between StoneYield’s secure, soul-bound layer and the broader DeFi ecosystem. It ensures every liquid STUSD remains fully collateralized by sUSDC while giving treasuries programmable, auditable access to liquidity whenever they need it.
+The STUSD wrapper bridges StoneYield’s locked core to the rest of DeFi. Every liquid STUSD stays fully collateralized by sUSDC, while treasuries get programmable, auditable liquidity on demand.

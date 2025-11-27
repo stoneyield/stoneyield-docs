@@ -7,41 +7,40 @@ next: "features/key-features"
 
 # How It Works
 
-## Soul-Bound Token Architecture
+## Soul-Bound Token Flow
 
-STUSD tokens maintain non-transferability and permanent binding to their minting wallet:
-- Transfer and trading capabilities disabled
-- Eliminates speculative trading behaviors
-- Reinforces long-duration hedging commitment
-- Enables precise and equitable reward attribution
+STUSD is minted soul-bound and stays tied to the origin wallet:
+- Transfers and trading are disabled by design
+- Discourages speculation and keeps focus on hedging
+- Long-dated locks reinforce program discipline
+- Rewards map cleanly to the wallets that earned them
 
-## Flash-Loan Defense
+## Flash-Loan Resilience
 
-Architected to neutralize flash loan-based exploitation patterns:
-- No borrow-return cycles can compromise the system
-- Protects protocol yield pools from manipulation vectors
-- Secures integrity of participant reward allocations
+The stack is shaped to blunt flash-loan style exploits:
+- Borrow/return loops can’t influence accounting paths
+- Yield pools can’t be manipulated mid-block
+- Participant rewards stay consistent under stress
 
-## Sustainable Yield Production
+## Real Yield Pipeline
 
-Yield generation operates through genuine, non-inflationary mechanisms:
-- Yield distributes via on-chain reward minting functions under protocol control
-- Accumulated protocol fees
-- Strategic integrations and collaborative partnerships
-- Zero token emissions or artificial APY constructions
-- Transparent, auditable reward architecture
+Returns come from verifiable sources, not emissions:
+- On-chain reward mints under protocol control
+- Accrued protocol fees and partner revenue
+- No synthetic APY or inflation-based rewards
+- Auditable distribution math
 
-## Security-First Design
+## Defense in Depth
 
-Constructed with layered security model to minimize risk exposure:
-- Smart contracts undergo independent security audits
-- Treasury administration via multisig protocols
-- Upgrade mechanisms incorporate time-lock constraints
-- Emergency circuit breaker capabilities available
+Risk controls are layered:
+- Third-party security reviews on contracts
+- Multisig-led treasury management
+- Time-locked upgrades where applicable
+- Emergency pause/circuit-breakers ready
 
-## Transparent Protocol Operations
+## Open Operations
 
-All economic and technical operations maintain public verifiability:
-- Real-time data on TVL, yield distribution, and reserve status
-- Clear tracking of protocol revenue and fee allocation
-- Open governance logic implementation
+State is observable end to end:
+- Live TVL, rewards, and reserve visibility
+- Transparent fee routing and income reporting
+- Governance logic kept in the open

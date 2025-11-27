@@ -1,34 +1,34 @@
-# StoneYield Documentation
+# StoneYield Docs
 
-Official documentation for the StoneYield protocol - a soul-bound hedged stablecoin protocol on Binance Smart Chain.
+Authoritative reference for StoneYield — a soul-bound hedging network on BNB Chain with the sUSDC core and STUSD wrapper.
 
-## Overview
+## What’s inside
 
-StoneYield is a decentralized hedging protocol that introduces soul-bound stablecoins (sUSDC) and a transferable wrapper (STUSD) for secure, sustainable yield generation through Venus Protocol integration.
+StoneYield issues non-transferable sUSDC against hedged deposits and pairs it with STUSD, a portable wrapper backed 1:1. Yield is sourced from integrated venues (e.g., Venus) and routed back to depositors without relying on inflationary emissions.
 
-## Tech Stack
+## Stack
 
-- **Framework**: Next.js 15
-- **Styling**: Tailwind CSS
-- **Content**: Markdown with gray-matter
-- **Deployment**: Vercel (recommended)
+- **Framework:** Next.js 15
+- **Styling:** Tailwind CSS
+- **Content:** Markdown + gray-matter
+- **Hosting:** Vercel-friendly
 
-## Getting Started
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3003](http://localhost:3003)
+Then open [http://localhost:3003](http://localhost:3003)
 
-## Documentation Structure
+## Map
 
-- **Whitepaper**: Protocol architecture, tokenomics, security model
-- **About**: Introduction and core mechanics
-- **Protocol**: Technical implementation details
-- **FAQ**: Common questions and answers
-- **STUSD**: Wrapper & liquidity layer documentation
+- **Whitepaper:** architecture, token economics, security posture
+- **About:** protocol intro and workflow
+- **Protocol:** implementation notes and interfaces
+- **FAQ:** quick answers
+- **STUSD:** wrapper + liquidity guidance
 
 ## License
 

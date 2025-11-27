@@ -7,26 +7,26 @@ next: "protocol/security-limits"
 
 # Contract Design
 
-The StoneYield protocol comprises a modular smart contract architecture engineered to generate yields while maintaining security and operational adaptability. The architecture isolates concerns between token administration, yield routing, and strategy execution.
+StoneYield uses a modular contract stack tuned for secure yield and clear separation of concerns: token controls, routing, and strategy execution live in distinct modules.
 
 ## Architecture Overview
 
 ### Core Contracts
 
 #### 1. StakeableAssetImpl (STUSD Token)
-Inherits from OpenZeppelin upgradeable components:
-- `ERC20Upgradeable`: standard token interface with upgradeability
-- `ERC20PermitUpgradeable`: enables gasless approvals (EIP-2612)
-- `Ownable2StepUpgradeable`: two-phase ownership transfer for security
-- `PausableUpgradeable`: allows emergency pause of critical functions
-- `ReentrancyGuardUpgradeable`: prevents nested reentrant calls
+Built on OpenZeppelin upgradeable pieces:
+- `ERC20Upgradeable` – upgradeable ERC20 base
+- `ERC20PermitUpgradeable` – EIP-2612 approvals
+- `Ownable2StepUpgradeable` – two-step ownership handoff
+- `PausableUpgradeable` – emergency pause switch
+- `ReentrancyGuardUpgradeable` – reentrancy protection
 
 #### 2. StrategyRouter
-Administers yield generation strategies:
-- Routes USDC deposits to Venus Protocol
-- Manages strategy weights and allocations
-- Controls withdrawals from yield sources
-- Owner-managed strategy configuration
+Coordinates yield strategies:
+- Sends USDC deposits to Venus
+- Manages weights/allocations
+- Handles withdrawals from strategies
+- Owner steers configuration
 
 #### 3. VenuSTUSDVault
 ERC-4626 compliant vault for Venus integration:
@@ -38,12 +38,12 @@ ERC-4626 compliant vault for Venus integration:
 ## Key Features
 
 ### Token Administration (StakeableAssetImpl)
-- **Soul-bound logic**: Enforced via custom `_update()` hook that locks transfers by default.
-- **Duration-based locks**: Implemented using `unlockAt` mapping per wallet.
-- **Manual unlocking**: Participants must invoke `unlock()` to enable transferability.
-- **Whitelist control**: DEX and pool addresses can receive whitelist via `setDex()`.
-- **Reward generation**: Admin can issue locked or placeholder-locked STUSD using `rewardMint()`.
-- **Emergency functions**: Includes `pause()`, `adminUnlock()`, `sweepUSDC()`.
+- **Soul-bound logic**: `_update()` hook blocks transfers by default.
+- **Timed locks**: `unlockAt` timestamps per wallet.
+- **Explicit unlock**: Users call `unlock()` to lift lock when eligible.
+- **Whitelist**: DEX/pool addresses settable via `setDex()`.
+- **Reward minting**: Admin can mint locked/placeholder STUSD via `rewardMint()`.
+- **Emergency controls**: `pause()`, `adminUnlock()`, `sweepUSDC()`.
 
 ### Yield Production (StrategyRouter + VenuSTUSDVault)
 - **Automated routing**: USDC deposits automatically route to Venus Protocol
@@ -98,4 +98,4 @@ Protocol retains 7% fee
 
 ## Summary
 
-The StoneYield protocol combines soul-bound token mechanics with automated yield generation through Venus Protocol. This modular design provides participants with transparent, sustainable yields while maintaining the security and non-transferability features essential to the protocol's mission. The 7% protocol fee ensures long-term sustainability while participants benefit from 93% of generated yields.
+StoneYield blends soul-bound token logic with automated Venus yield routing. The modular split keeps security tight, yields transparent, and operations sustainable (7% protocol fee, ~93% to users).
