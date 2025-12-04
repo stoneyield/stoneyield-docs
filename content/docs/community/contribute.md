@@ -10,7 +10,7 @@ StoneYield welcomes contributions from the community. Help us build the future o
 
 ## GitHub Repository
 
-**[github.com/StoneYield-Labs](https://github.com/StoneYield-Labs)**
+**[github.com/stoneyield](https://github.com/stoneyield)**
 
 Visit our GitHub to:
 - View source code
@@ -52,7 +52,7 @@ Found a security vulnerability? Report it responsibly:
 
 Questions about contributing?
 - **Discord**: [discord.gg/stoneyield](https://discord.gg/stoneyield)
-- **Telegram**: [t.me/stoneyield.io](https://t.me/stoneyield.io)
+- **Telegram**: [t.me/stoneyield](https://t.me/stoneyield)
 - **Email**: dev@stoneyield.io
 
 Thank you for contributing to StoneYield! 🙏

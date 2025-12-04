@@ -32,14 +32,14 @@ export function Footer() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="https://github.com/StoneYield-Labs"
+            href="https://github.com/stoneyield/stoneyield-docs"
             target="_blank"
             className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white"
           >
             <Github className="h-4 w-4" />
           </Link>
           <Link
-            href="#"
+            href="https://t.me/stoneyield"
             target="_blank"
             className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white"
             aria-label="Telegram"
@@ -47,7 +47,7 @@ export function Footer() {
             <Send className="h-4 w-4" />
           </Link>
           <Link
-            href="#"
+            href="https://discord.gg/stoneyield"
             target="_blank"
             className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white"
             aria-label="Discord"
@@ -55,7 +55,7 @@ export function Footer() {
             <MessageCircle className="h-4 w-4" />
           </Link>
           <Link
-            href="#"
+            href="http://www.instagram.com/stone.yield"
             target="_blank"
             className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white"
             aria-label="Instagram"

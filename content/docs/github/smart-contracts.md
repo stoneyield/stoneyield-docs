@@ -10,7 +10,7 @@ The StoneYield smart contracts are open-source and available for review, audit, 
 
 ## Repository
 
-🔗 **GitHub**: [github.com/StoneYield-Labs/stoneyield](https://github.com/StoneYield-Labs/stoneyield)
+🔗 **GitHub**: [github.com/stoneyield/stoneyield-contracts](https://github.com/stoneyield/stoneyield-contracts)
 
 ## Contract Architecture
 
@@ -61,8 +61,8 @@ scripts/
 ### Installation
 
 ```bash
-git clone https://github.com/StoneYield-Labs/stoneyield-contracts-public.git
-cd stoneyield-contracts-public
+git clone https://github.com/stoneyield/stoneyield-contracts.git
+cd stoneyield-contracts
 npm install
 ```
 

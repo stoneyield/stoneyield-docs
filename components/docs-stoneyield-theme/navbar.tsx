@@ -35,26 +35,26 @@ export function Navbar() {
             Contact
           </Link>
           <div className="flex items-center gap-2">
-            <Link href="https://github.com/StoneYield-Labs" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white">
+            <Link href="https://github.com/stoneyield/stoneyield-docs" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white">
               <Github className="h-4 w-4" />
             </Link>
-            <Link href="#" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white" aria-label="Telegram">
+            <Link href="https://t.me/stoneyield" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white" aria-label="Telegram">
               <Send className="h-4 w-4" />
             </Link>
-            <Link href="#" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white" aria-label="Discord">
+            <Link href="https://discord.gg/stoneyield" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white" aria-label="Discord">
               <MessageCircle className="h-4 w-4" />
             </Link>
-            <Link href="#" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white" aria-label="Instagram">
+            <Link href="http://www.instagram.com/stone.yield" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white" aria-label="Instagram">
               <Instagram className="h-4 w-4" />
             </Link>
           </div>
         </div>
 
         <div className="flex items-center gap-3 md:hidden">
-          <Link href="https://github.com/StoneYield-Labs" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white">
+          <Link href="https://github.com/stoneyield/stoneyield-docs" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white">
             <Github className="h-4 w-4" />
           </Link>
-          <Link href="#" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white">
+          <Link href="https://t.me/stoneyield" target="_blank" className="rounded-full border border-white/15 p-2 text-slate-200 transition hover:border-emerald-300 hover:text-white">
             <Send className="h-4 w-4" />
           </Link>
         </div>

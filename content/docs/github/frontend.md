@@ -11,7 +11,7 @@ The StoneYield frontend provides an intuitive interface for interacting with the
 
 ## Repository
 
-🔗 **GitHub**: [github.com/StoneYield-Labs/stoneyield/frontend](https://github.com/StoneYield-Labs/stoneyield/tree/main/frontend)
+🔗 **GitHub**: [github.com/stoneyield/stoneyield](https://github.com/stoneyield/stoneyield)
 
 ## Technology Stack
 
@@ -75,7 +75,7 @@ frontend/
 ### Installation
 
 ```bash
-git clone https://github.com/StoneYield-Labs/stoneyield.git
+git clone https://github.com/stoneyield/stoneyield.git
 cd stoneyield/frontend
 npm install
 ```

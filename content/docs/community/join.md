@@ -15,13 +15,13 @@ Join the StoneYield community and stay connected with us on social media.
 **[x.com/stoneyield.io](https://x.com/stoneyield.io)**
 
 ### Telegram
-**[t.me/stoneyield.io](https://t.me/stoneyield.io)**
+**[t.me/stoneyield](https://t.me/stoneyield)**
 
 ### Discord
 **[discord.gg/stoneyield](https://discord.gg/stoneyield)**
 
 ### Instagram
-**[instagram.com/stoneyield.io](https://instagram.com/stoneyield.io)**
+**[instagram.com/stone.yield](http://www.instagram.com/stone.yield)**
 
 ### GitHub
-**[github.com/StoneYield-Labs](https://github.com/StoneYield-Labs)**
+**[github.com/stoneyield](https://github.com/stoneyield)**
